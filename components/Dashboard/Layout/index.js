@@ -11,7 +11,7 @@ export default function IndexLayout({ children }) {
           <div>
             <DashBoardNavbar />
           </div>
-          <div className=" mb-5 mt-3 p-3 overflow-auto" style={{ height: "86vh", backgroundColor: "white" }}>
+          <div className=" mb-5 mt-3 p-3 overflow-auto" style={{height: "80vh", backgroundColor: "white" }}>
             {children}
           </div>
           <div className="fixed-bottom">

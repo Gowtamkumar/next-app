@@ -1,7 +1,7 @@
 
 import Link from "next/link";
-// import IndexLayout from "../Layout";
-// import DashboardSidebar from '../Sidebar/index'
+import Image from "next/image";
+import profile from '../../../images/profile.png'
 
 export default function DashBoardNavbar() {
   return (
@@ -12,28 +12,33 @@ export default function DashBoardNavbar() {
             <i className="fas fa-sliders-h mt-2 ml-3" style={{ fontSize: "20px" }}></i>
             <div className="dropdown">
               <button href="/" className="list-group-item-profile text-center align-items-center btn" id="dropdownUser1" data-bs-toggle="dropdown">
-                <img src="{profile}" alt="Next js Profile" width="30" height="30" className="rounded-circle" />{/* This img is profile image */}
+                <Image src={profile} alt="Next js Profile" width="30" height="30" className="rounded-circle" />{/* This img is profile image */}
               </button>
 
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 <li className="dropdown-header d-flex align-items-center">
-                  <img src="{profile}" alt="Next Profile" width="30" height="30" className="rounded-circle" />
+
+                  <Image src={profile} alt="Next Profile" width="30" height="30" className="rounded-circle" />
                   <div className="p-2 mr-3">
                     <h6>Jane doe</h6>
                     <span>Admin</span>
                   </div>
                 </li>
                 <li>
-                  <button className="dropdown-item d-flex align-items-center" href="/">
-                    <i className="ri-user-smile-line pr-2"></i>
-                    <span>My Profile</span>
-                  </button>
+                  <Link className="dropdown-item d-flex align-items-center" href='/dashboard/profile'>
+
+                    <a>My Profile</a>
+
+                  </Link>
                 </li>
 
                 <li>
-                  <button className="dropdown-item d-flex align-items-center" href="/">
-                    <i className="ri-settings-5-line pr-2"></i><span>Account Settings</span>
-                  </button>
+                  <Link className="dropdown-item d-flex align-items-center" href='/dashboard/profile'>
+                    {/* <i className="ri-settings-5-line pr-2"></i> */}
+                    <a>
+                      Account Settings
+                    </a>
+                  </Link>
                 </li>
 
                 <li>

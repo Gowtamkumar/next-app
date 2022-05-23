@@ -18,9 +18,9 @@ export default function DashBoardSidebar() {
 								<div id={`${sidebarItem.id}`} className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 									<div className="accordion-body">
 										{
-											sidebarItem?.children.map((item) => {
+											sidebarItem?.children.map((item, index) => {
 												return (
-													<ul>
+													<ul key={index}>
 														<li>
 															<Link href={`${item.url}`}>{item.name}</Link>
 														</li>

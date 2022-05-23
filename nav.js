@@ -61,11 +61,11 @@ const dashboardRoutes = [
     ]
   },
   {
-    heading: "Report"
+    heading: "Setting"
   },
   {
-    name: "Report",
-    url: "/",
+    name: "All Setting",
+    url: "/setting",
     icon: "ri-file-chart-fill"
   }
 ]

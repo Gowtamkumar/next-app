@@ -1,12 +1,10 @@
 import { useEffect } from 'react'
-import Footer from '../components/footer/Footer'
+import Footer from '../components/Footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
-// import 'bootstrap/dist/js/bootstrap.js'
-// import DashboardNavbar from '../components/Dashboard/Navbar'
-// import DashBoardFooter from '../components/Dashboard/Footer'
+
 
 function MyApp({ Component, pageProps }) {
 
