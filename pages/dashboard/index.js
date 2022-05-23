@@ -1,4 +1,4 @@
-import TeamLayout from "../../components/Sidebar"
+import IndexLayout from "../../components/Dashboard/Layout"
 
 export default function index() {
   return (
@@ -9,4 +9,4 @@ export default function index() {
 }
 
 
-index.PageLayOut = TeamLayout
+index.PageLayOut = IndexLayout

@@ -32,7 +32,6 @@ export default function Navbar() {
                 <a className="nav-link">Dashboard</a>
               </Link>
             </li>
-
           </ul>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import TeamLayout from '../../../components/sidebar'
+import IndexLayout from "../../../components/Dashboard/Layout"
+import DashboardSidebar from "../../../components/Dashboard/Sidebar"
 
 export default function Sidebar4() {
   return (
@@ -6,4 +7,4 @@ export default function Sidebar4() {
   )
 }
 
-Sidebar4.PageLayOut = TeamLayout
+Sidebar4.PageLayOut = IndexLayout
