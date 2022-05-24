@@ -16,26 +16,26 @@ export default function DashBoardNavbar() {
               </button>
 
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                <li className="dropdown-header d-flex align-items-center">
-
-                  <Image src={profile} alt="Next Profile" width="30" height="30" className="rounded-circle" />
-                  <div className="p-2 mr-3">
-                    <h6>Jane doe</h6>
-                    <span>Admin</span>
-                  </div>
+                <li className="dropdown-header  dropdown-item">
+                  <Link href="/dashboard/profile">
+                    <a className="p-2 mr-3 d-flex align-items-center nav-link">
+                      <Image src={profile} alt="Next Profile" width="30" height="30" className="rounded-circle" />
+                      <div className="mx-3">
+                        <h6>Jane doe</h6>
+                        <i className="fs-bold">Admin</i>
+                      </div>
+                    </a>
+                  </Link>
                 </li>
-                <li>
-                  <Link className="dropdown-item d-flex align-items-center" href='/dashboard/profile'>
-
-                    <a>My Profile</a>
-
+                <li className="dropdown-item">
+                  <Link className="dropdown-item" href='/dashboard/profile'>
+                    <a className="nav-link">My Profile</a>
                   </Link>
                 </li>
 
-                <li>
-                  <Link className="dropdown-item d-flex align-items-center" href='/dashboard/profile'>
-                    {/* <i className="ri-settings-5-line pr-2"></i> */}
-                    <a>
+                <li className="dropdown-item">
+                  <Link className="dropdown-item " href='/dashboard/profile'>
+                    <a className="nav-link">
                       Account Settings
                     </a>
                   </Link>
@@ -44,9 +44,11 @@ export default function DashBoardNavbar() {
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
-                <li className="dropdown-item d-flex align-items-center  ">
+                <li className="dropdown-item">
                   {/* <i className="fas fa-running"></i> */}
-                  <Link className="dropdown-item" href="/">Sign out</Link>
+                  <Link href="/">
+                    <a className="nav-link">Sign out</a>
+                  </Link>
                 </li>
               </ul>
 
