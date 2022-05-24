@@ -6,7 +6,8 @@ import styles from "../../../styles/sidebar.module.css";
 export default function DashBoardSidebar() {
 	const router = useRouter();
 	return (
-		<div className="flex-item-left" >
+
+		<div className="flex-item-left">
 			<h2 className="text-center my-2" style={{ backgroundColor: "white", padding: "6px" }}>Logo</h2>
 			{dashboardRoutes.map((sidebarItem, index) => {
 				if (sidebarItem?.children) {

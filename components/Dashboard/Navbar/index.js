@@ -2,6 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import profile from '../../../images/profile.png'
+import DashBoardSidebar from "../Sidebar";
+import styles from "../../../styles/navbar.module.css";
 
 export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
   return (
@@ -9,7 +11,22 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
       <nav>
         <div className="container-fluid d-flex justify-content-between" style={{ backgroundColor: "white" }}>
           <div className='d-flex justify-content-between align-items-center' style={{ width: "100%" }}>
-            <i className="fas fa-sliders-h ml-3" style={{ fontSize: "20px", cursor: "pointer" }} onClick={() => setToggleSidebar(!toggleSidebar)} />
+            <i className="fas fa-sliders-h ml-3 desktop" style={{ fontSize: "20px", cursor: "pointer" }} onClick={() => setToggleSidebar(!toggleSidebar)} />
+
+            {/* ............................ */}
+            <i className="fas fa-sliders-h mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} />
+            <div class={`offcanvas ${styles.moboleSidebar}`} data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div class="offcanvas-header">
+                {/* <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5> */}
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class={styles.moboleSidebar_body}>
+                <DashBoardSidebar />
+              </div>
+            </div>
+            {/* ............................ */}
+
+
             <div className="dropdown">
               <button href="/" className="list-group-item-profile text-center align-items-center btn" id="dropdownUser1" data-bs-toggle="dropdown">
                 <Image src={profile} alt="Next js Profile" width="30" height="30" className="rounded-circle" />{/* This img is profile image */}
