@@ -1,19 +1,22 @@
 import Link from "next/link";
 import dashboardRoutes from "../../../nav";
+import { useRouter } from "next/router";
 
 export default function DashBoardSidebar() {
+	const router = useRouter();
+
 	return (
 		<div className="col-md-2">
-			<h2 className="text-center p-2 my-2" style={{ backgroundColor: "white" }}>Logo</h2>
+			<h2 className="text-center my-2" style={{ backgroundColor: "white", padding: "6px" }}>Logo</h2>
 			{dashboardRoutes.map((sidebarItem, index) => {
 				if (sidebarItem?.children) {
 					return (
 						<div className="accordion" id="accordionExample" key={index}>
 							<div className="accordion-item">
-								<h2 className="accordion-header" id="headingOne">
-									<button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${sidebarItem.id}`} aria-expanded="true" aria-controls={`${sidebarItem.id}`}>
+								<h2 id="headingOne">
+									<span className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${sidebarItem.id}`} aria-expanded="true" aria-controls={`${sidebarItem.id}`}>
 										{sidebarItem.title}
-									</button>
+									</span>
 								</h2>
 								<div id={`${sidebarItem.id}`} className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 									<div className="accordion-body">
@@ -21,7 +24,7 @@ export default function DashBoardSidebar() {
 											sidebarItem?.children.map((item, index) => {
 												return (
 													<ul key={index}>
-														<li>
+														<li className={router.pathname == item.url ? "active" : ""}>
 															<Link href={`${item.url}`}>{item.name}</Link>
 														</li>
 													</ul>
@@ -42,7 +45,7 @@ export default function DashBoardSidebar() {
 				} else {
 					return (
 						<ul>
-							<li>
+							<li className={router.pathname == sidebarItem.url ? "active" : ""}>
 								<Link href={`${sidebarItem.url}`}>{sidebarItem.name}</Link>
 
 							</li>

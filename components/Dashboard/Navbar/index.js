@@ -7,7 +7,7 @@ export default function DashBoardNavbar() {
   return (
     <header>
       <nav>
-        <div className="container-fluid d-flex justify-content-between p-2" style={{ backgroundColor: "white" }}>
+        <div className="container-fluid d-flex justify-content-between" style={{ backgroundColor: "white" }}>
           <div className='d-flex justify-content-between ' style={{ width: "100%" }}>
             <i className="fas fa-sliders-h mt-2 ml-3" style={{ fontSize: "20px" }}></i>
             <div className="dropdown">
