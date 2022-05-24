@@ -3,10 +3,11 @@ import dashboardRoutes from "../../../nav";
 import { useRouter } from "next/router";
 import styles from "../../../styles/sidebar.module.css";
 
-export default function DashBoardSidebar() {
+export default function DashBoardSidebar({toggleSidebar}) {
+	console.log("toggleSidebar", toggleSidebar);
 	const router = useRouter();
 	return (
-		<div className="col-md-2">
+		<div className="col-md-2" >
 			<h2 className="text-center my-2" style={{ backgroundColor: "white", padding: "6px" }}>Logo</h2>
 			{dashboardRoutes.map((sidebarItem, index) => {
 				if (sidebarItem?.children) {
