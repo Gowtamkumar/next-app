@@ -16,8 +16,7 @@ a {
 }
 
 .active {
-  background-color: red;
-
+  background-color: #F8F9FA;
 }
 
 .layoutContainer {
@@ -30,14 +29,14 @@ a {
 
 .flex-item-left {
   /* background-color: #f1f1f1; */
-  padding: 10px;
+  /* padding: 10px; */
   width: 230px;
   flex: 14%;
 }
 
 .flex-item-right {
   /* background-color: dodgerblue; */
-  padding: 10px;
+  padding: 0px 0px 10px 10px;
   flex: 86%;
 }
 
@@ -48,6 +47,7 @@ a {
 
 .desktop {
   display: block;
+  background-color: white;
 }
 
 /* Responsive Seciton */
@@ -60,6 +60,7 @@ a {
 
   .desktop {
     display: none;
+
   }
 
   .mobile {

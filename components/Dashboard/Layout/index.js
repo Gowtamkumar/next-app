@@ -9,17 +9,17 @@ export default function IndexLayout({ children }) {
   return (
     <div className="container-fluid bg-light" >
       <div className="layoutContainer">
-        <div className="desktop">
+        <div className="desktop mt-2">
           {toggleSidebar && <DashBoardSidebar />}
         </div>
         <div className="flex-item-right mt-2">
-          <div>
-            <DashBoardNavbar
-              setToggleSidebar={setToggleSidebar}
-              toggleSidebar={toggleSidebar}
-            />
-          </div>
-          <div className="mb-5 mt-3 p-3 overflow-auto" style={{ height: "84vh", backgroundColor: "white" }}>
+
+          <DashBoardNavbar
+            setToggleSidebar={setToggleSidebar}
+            toggleSidebar={toggleSidebar}
+          />
+
+          <div className="mb-1 mt-2 p-3 overflow-auto" style={{ height: "86vh", backgroundColor: "white" }}>
             {children}
           </div>
           <div className="fixed-bottom">
