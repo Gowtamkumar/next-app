@@ -27,7 +27,6 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
             </div>
             {/* ............................ */}
 
-
             <div className="dropdown">
               <button href="/" className="list-group-item-profile text-center align-items-center btn" id="dropdownUser1" data-bs-toggle="dropdown">
                 <Image src={profile} alt="Next js Profile" width="30" height="30" className="rounded-circle" />{/* This img is profile image */}
@@ -61,7 +60,7 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
                 </li>
                 <li className="dropdown-item">
                   <Link href="/login">
-                    <a className="nav-link">Sign out</a>
+                    <a className="nav-link">LogOut</a>
                   </Link>
                 </li>
               </ul>

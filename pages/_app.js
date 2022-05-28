@@ -9,7 +9,7 @@ import Head from 'next/head'
 function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    import('bootstrap/dist/js/bootstrap');
   }, []);
 
   return (<>
