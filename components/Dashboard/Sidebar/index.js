@@ -2,6 +2,7 @@ import Link from "next/link";
 import dashboardRoutes from "../../../nav";
 import { useRouter } from "next/router";
 import styles from "../../../styles/sidebar.module.css";
+import { BsFillDice4Fill } from "react-icons/bs";
 
 export default function DashBoardSidebar() {
 	const router = useRouter();
@@ -26,7 +27,7 @@ export default function DashBoardSidebar() {
 												<ul key={index} className={`navbar-nav ${styles.sidebarChildren}`} >
 													<li className={router.pathname == item.url ? "active" : "nav-item"}>
 														<Link href={`${item.url}`}>
-															<a className="nav-link">{item.name}</a>
+															<a className="nav-link ml-4"><BsFillDice4Fill />{item.name}</a>
 														</Link>
 													</li>
 												</ul>

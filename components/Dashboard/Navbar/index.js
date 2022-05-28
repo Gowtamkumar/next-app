@@ -15,12 +15,12 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
 
             {/* ............................ */}
             <i className="fas fa-sliders-h mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} />
-            <div class={`offcanvas ${styles.moboleSidebar}`} data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-              <div class="offcanvas-header">
-                {/* <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5> */}
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <div className={`offcanvas ${styles.moboleSidebar}`} data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+              <div className="offcanvas-header">
+                {/* <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5> */}
+                <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
-              <div class={styles.moboleSidebar_body}>
+              <div className={styles.moboleSidebar_body}>
                 <DashBoardSidebar />
               </div>
             </div>
