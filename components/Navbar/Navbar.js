@@ -10,9 +10,7 @@ export default function Navbar() {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
             <Link href="/">
-              <a className="nav-link text-dark">
-                <h5>Home</h5>
-              </a>
+              <a className="nav-link text-dark"><h5>Home</h5></a>
             </Link>
             <button
               className="navbar-toggler"
@@ -48,8 +46,6 @@ export default function Navbar() {
                     <a className="nav-link">Dashboard</a>
                   </Link>
                 </li>
-
-
               </ul>
             </div>
           </div>
