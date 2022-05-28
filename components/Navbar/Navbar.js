@@ -3,7 +3,9 @@ import { useRouter } from "next/router";
 
 export default function Navbar() {
   const router = useRouter();
+
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <Link href="/">
@@ -12,7 +14,7 @@ export default function Navbar() {
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div className="collapse navbar-collapse me-auto" id="navbarNav">
           <ul className="navbar-nav">
             <li className={router.pathname == '/' ? "active" : "nav-item"}>
               <Link href="/">
@@ -31,7 +33,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link href="/dashboard" >
-                <a className="nav-link">Dashboard</a>
+                <a className="nav-link">Dashboard </a>
               </Link>
             </li>
           </ul>

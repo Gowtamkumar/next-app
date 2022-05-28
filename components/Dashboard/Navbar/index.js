@@ -4,6 +4,7 @@ import Image from "next/image";
 import profile from '../../../images/profile.png'
 import DashBoardSidebar from "../Sidebar";
 import styles from "../../../styles/navbar.module.css";
+import { FaSlidersH } from "react-icons/fa";
 
 export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
   return (
@@ -11,13 +12,13 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
       <nav>
         <div className="container-fluid d-flex justify-content-between" style={{ backgroundColor: "white" }}>
           <div className='d-flex justify-content-between align-items-center' style={{ width: "100%" }}>
-            <i className="fas fa-sliders-h ml-3 desktop" style={{ fontSize: "20px", cursor: "pointer" }} onClick={() => setToggleSidebar(!toggleSidebar)} />
-
+            <FaSlidersH onClick={() => setToggleSidebar(!toggleSidebar)} style={{ fontSize: "20px", cursor: "pointer" }} className="desktop" />
+            {/* <i className="fas fa-sliders-h ml-3 desktop" style={{ fontSize: "20px", cursor: "pointer" }} onClick={() => setToggleSidebar(!toggleSidebar)} /> */}
             {/* ............................ */}
-            <i className="fas fa-sliders-h mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} />
+            <FaSlidersH className="mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} />
+            {/* <i className="fas fa-sliders-h mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} /> */}
             <div className={`offcanvas ${styles.moboleSidebar}`} data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
               <div className="offcanvas-header">
-                {/* <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdroped with scrolling</h5> */}
                 <button type="button" className="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div className={styles.moboleSidebar_body}>
@@ -59,7 +60,7 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
                   <hr className="dropdown-divider" />
                 </li>
                 <li className="dropdown-item">
-                  <Link href="/">
+                  <Link href="/login">
                     <a className="nav-link">Sign out</a>
                   </Link>
                 </li>

@@ -1,8 +1,12 @@
+import { BsFillDice4Fill } from "react-icons/bs";
+import { AiFillAppstore, AiFillTool } from "react-icons/ai";
+
+
 const dashboardRoutes = [
   {
     name: "Dashboard",
     url: "/dashboard",
-    icon: "ri-dashboard-fill"
+    icon: <AiFillAppstore />
   },
   {
     heading: "Peoples"
@@ -10,54 +14,33 @@ const dashboardRoutes = [
   {
     title: "Food",
     id: "food-nav",
-    icon: "ri-file-chart-fill",
+    icon: <BsFillDice4Fill />,
     children: [
       {
-        childIcon: "ri-checkbox-blank-circle-line",
+        childIcon: <BsFillDice4Fill />,
         name: "Sidebar 1",
         url: "/dashboard/sidebar1",
         navactive: false
       },
       {
-        childIcon: "ri-checkbox-blank-circle-line",
+        childIcon: <BsFillDice4Fill />,
         name: "Sidebar 2",
         url: "/dashboard/sidebar2",
         navactive: false
       },
 
       {
-        childIcon: "ri-checkbox-blank-circle-line",
+        childIcon: <BsFillDice4Fill />,
         name: "Sidebar 3",
         url: "/dashboard/sidebar3",
         navactive: false
       },
       {
-        childIcon: "ri-checkbox-blank-circle-line",
+        childIcon: <BsFillDice4Fill />,
         name: "Sidebar 4",
         url: "/dashboard/sidebar4",
         navactive: false
       }
-    ]
-  },
-
-  {
-    heading: "Nice"
-  },
-  {
-    title: "Nice",
-    id: "forms-nav",
-    icon: "ri-booklet-line",
-    children: [
-      {
-        childIcon: "ri-checkbox-blank-circle-line",
-        name: "Nice",
-        url: "/"
-      },
-      {
-        childIcon: "ri-checkbox-blank-circle-line",
-        name: "Nice",
-        url: "/"
-      },
     ]
   },
   {
@@ -65,8 +48,8 @@ const dashboardRoutes = [
   },
   {
     name: "All Setting",
-    url: "/setting",
-    icon: "ri-file-chart-fill"
+    url: "/dashboard/setting",
+    icon: <AiFillTool />
   }
 ]
 

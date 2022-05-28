@@ -7,21 +7,31 @@ export default function IndexLayout({ children }) {
 
 
   return (
-    <div className="container-fluid bg-light" >
+    <div className="container-fluid " style={{ backgroundColor: "#F6F9FF" }}>
       <div className="layoutContainer">
         <div className="desktop mt-2">
           {toggleSidebar && <DashBoardSidebar />}
         </div>
         <div className="flex-item-right mt-2">
-
           <DashBoardNavbar
             setToggleSidebar={setToggleSidebar}
             toggleSidebar={toggleSidebar}
           />
-
-          <div className="mb-1 mt-2 p-3 overflow-auto" style={{ height: "86vh", backgroundColor: "white" }}>
-            {children}
+          <div className="overflow-auto" style={{ height: "90vh", backgroundColor: "white" }}>
+            <nav className="py-1" style={{ backgroundColor: "#F6F9FF" }}>
+              <a>Dashboard</a>
+              <ol className="breadcrumb">
+                <li className="breadcrumb-item">
+                  <a href="#">Home</a>
+                </li>
+                <li className="breadcrumb-item active" aria-current="page">Library</li>
+              </ol>
+            </nav>
+            <div className="p-2">
+              {children}
+            </div>
           </div>
+
           <div className="fixed-bottom">
             <DashBoardFooter />
           </div>

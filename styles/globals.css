@@ -7,7 +7,8 @@ body {
 }
 
 a {
-  color: inherit;
+  /* color: rgb(1, 41, 112) !important; */
+  color: #6C757D !important;
   text-decoration: none;
 }
 
@@ -16,7 +17,8 @@ a {
 }
 
 .active {
-  background-color: #F8F9FA;
+  background-color: #F6F9FF;
+  font-weight: bold;
 }
 
 .layoutContainer {
