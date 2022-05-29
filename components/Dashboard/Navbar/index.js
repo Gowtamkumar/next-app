@@ -13,8 +13,7 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
         <div className="container-fluid d-flex justify-content-between" style={{ backgroundColor: "white" }}>
           <div className='d-flex justify-content-between align-items-center' style={{ width: "100%" }}>
             <FaSlidersH onClick={() => setToggleSidebar(!toggleSidebar)} style={{ fontSize: "20px", cursor: "pointer" }} className="desktop" />
-            {/* <i className="fas fa-sliders-h ml-3 desktop" style={{ fontSize: "20px", cursor: "pointer" }} onClick={() => setToggleSidebar(!toggleSidebar)} /> */}
-            {/* ............................ */}
+
             <FaSlidersH className="mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} />
             {/* <i className="fas fa-sliders-h mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" style={{ fontSize: "20px", cursor: "pointer" }} /> */}
             <div className={`offcanvas ${styles.moboleSidebar}`} data-bs-scroll="true" tabIndex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
@@ -25,8 +24,6 @@ export default function DashBoardNavbar({ setToggleSidebar, toggleSidebar }) {
                 <DashBoardSidebar />
               </div>
             </div>
-            {/* ............................ */}
-
             <div className="dropdown">
               <button href="/" className="list-group-item-profile text-center align-items-center btn" id="dropdownUser1" data-bs-toggle="dropdown">
                 <Image src={profile} alt="Next js Profile" width="30" height="30" className="rounded-circle" />{/* This img is profile image */}

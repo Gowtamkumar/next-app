@@ -2,6 +2,7 @@ import DashBoardFooter from "../Footer";
 import DashBoardNavbar from "../Navbar";
 import DashBoardSidebar from "../Sidebar";
 import { useState } from "react"
+
 export default function IndexLayout({ children }) {
   const [toggleSidebar, setToggleSidebar] = useState(true)
 
@@ -17,7 +18,7 @@ export default function IndexLayout({ children }) {
             setToggleSidebar={setToggleSidebar}
             toggleSidebar={toggleSidebar}
           />
-          <div className="overflow-auto" style={{ height: "90vh", backgroundColor: "white" }}>
+          <div className="overflow-auto" style={{ height: "89vh", backgroundColor: "white" }}>
             <nav className="" style={{ backgroundColor: "#F6F9FF" }}>
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
