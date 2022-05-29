@@ -18,8 +18,7 @@ export default function IndexLayout({ children }) {
             toggleSidebar={toggleSidebar}
           />
           <div className="overflow-auto" style={{ height: "90vh", backgroundColor: "white" }}>
-            <nav className="py-1" style={{ backgroundColor: "#F6F9FF" }}>
-              <a>Dashboard</a>
+            <nav className="" style={{ backgroundColor: "#F6F9FF" }}>
               <ol className="breadcrumb">
                 <li className="breadcrumb-item">
                   <a href="#">Home</a>
@@ -31,7 +30,6 @@ export default function IndexLayout({ children }) {
               {children}
             </div>
           </div>
-
           <div className="fixed-bottom">
             <DashBoardFooter />
           </div>

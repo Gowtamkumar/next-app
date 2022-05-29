@@ -6,9 +6,9 @@ export default function Navbar() {
 
   return (
     <>
-      <section class="container-fluid bg-light">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
+      <section className="container-fluid bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
             <Link href="/">
               <a className="nav-link text-dark"><h5>Home</h5></a>
             </Link>
@@ -20,11 +20,11 @@ export default function Navbar() {
               aria-controls="navbarNav"
               aria-expanded="false"
               aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse text-dark" id="navbarNav">
-              <ul class="navbar-nav ms-auto">
+            <div className="collapse navbar-collapse text-dark" id="navbarNav">
+              <ul className="navbar-nav ms-auto">
                 <li className={router.pathname == '/' ? "active" : "nav-item"}>
                   <Link href="/">
                     <a className="nav-link text-dark">Home</a>

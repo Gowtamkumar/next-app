@@ -43,13 +43,37 @@ const dashboardRoutes = [
       }
     ]
   },
+
   {
     heading: "Setting"
   },
   {
-    name: "All Setting",
-    url: "/dashboard/setting",
-    icon: <AiFillTool />
+    title: "All Setting",
+    id: "setting-sidebar",
+    icon: <BsFillDice4Fill />,
+    children: [
+      {
+        childIcon: <BsFillDice4Fill />,
+        name: "Header",
+        url: "/dashboard/header",
+      },
+      {
+        childIcon: <BsFillDice4Fill />,
+        name: "Footer",
+        url: "/dashboard/footer"
+      },
+
+      {
+        childIcon: <BsFillDice4Fill />,
+        name: "Sidebar 3",
+        url: "/dashboard/sidebar3",
+      },
+      {
+        childIcon: <BsFillDice4Fill />,
+        name: "Sidebar 4",
+        url: "/dashboard/sidebar4"
+      }
+    ]
   }
 ]
 
