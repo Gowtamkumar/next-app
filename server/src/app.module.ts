@@ -11,6 +11,9 @@ import { IncomeModule } from '@modules/income/income.module';
 import { ExpenseModule } from '@modules/expense/expense.module';
 import { configValidationSchema } from './config/config.schema';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { CustomerModule } from '@modules/customer/customer.module';
+import { SupplierModule } from '@modules/supplier/supplier.module';
+import { FileModule } from '@modules/shared/file/file.module';
 
 
 @Module({
@@ -21,8 +24,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
     UserRolesModule,
     IncomeModule,
     ExpenseModule,
-
-
+    CustomerModule,
+    SupplierModule,
+    FileModule,
+  
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`,

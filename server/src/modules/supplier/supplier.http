@@ -1,0 +1,30 @@
+### Create a new lab test
+POST http://localhost:3900/api/suppliers
+Content-Type: application/json
+
+{
+        "name": "Unknown",
+        "email": "gowtam@gmail.com",
+        "phoneNo": "6464654654",
+        "address": "dfasdfasdf"
+}
+### Find all filtered lab tests
+GET  http://localhost:3900/api/suppliers
+
+
+### Find a lab test by id
+GET  http://localhost:3900/api/suppliers/928f6140-8a31-4e18-9efe-e8a7d7e0db13
+
+### Update a lab test
+PUT  http://localhost:3900/api/suppliers/f0df4449-2c16-4d18-b05e-49d83b42fd9a
+Content-Type: application/json
+
+{
+        "name": "Gowtam",
+        "email": "gowtama@gmail.com",
+        "phoneNo": "6464654654564564564",
+        "address": "dfasdfasdf"
+}
+### Delete a lab test by id
+DELETE  http://localhost:3900/api/suppliers/928f6140-8a31-4e18-9efe-e8a7d7e0db13
+
