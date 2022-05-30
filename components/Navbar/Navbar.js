@@ -6,7 +6,7 @@ export default function Navbar() {
 
   return (
     <>
-      <section className="container-fluid bg-success">
+      <section className="container-fluid bg-light">
         <div className="row mt-2 align-items-center">
           <div className="col-2">
             logo
@@ -26,10 +26,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="col-3 d-flex justify-content-between">
-
             <div className="dropdown">
               <button
-                className="btn btn-primary position-relative"
+                className="btn btn-success position-relative"
                 id="dropdownUser1" data-bs-toggle="dropdown">
                 Cart
                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
@@ -41,13 +40,10 @@ export default function Navbar() {
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                 dd
               </ul>
-
             </div>
-
-
             <div className="dropdown">
               <button
-                className="list-group-item-profile text-center align-items-center btn"
+                className="list-group-item-profile text-center align-items-center btn btn-success"
                 id="dropdownUser1" data-bs-toggle="dropdown"
               >
                 Account
@@ -84,7 +80,6 @@ export default function Navbar() {
                   </Link>
                 </li>
               </ul>
-
             </div>
 
           </div>
