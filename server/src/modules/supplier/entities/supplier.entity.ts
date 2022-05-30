@@ -17,6 +17,7 @@ export class SupplierEntity {
     @Column({ nullable: true })
     address: string
 
+    
     // @OneToMany(_type => PaymentEntity, payments => payments.supplier, { eager: true })
     // payments: PaymentEntity[]
 
