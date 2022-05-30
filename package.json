@@ -1,23 +1,34 @@
 {
-  "name": "my-next-app",
-  "version": "0.1.0",
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "description": "ecommerce Web application",
+  "author": "Gowtam Kumar",
   "private": true,
+  "license": "MIT",
+  "main": "",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run start:prod --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run start:dev --prefix server",
+    "seeder:down": "npm run seeder:down --prefix server",
+    "seeder:up": "npm run seeder:up --prefix server",
+    "ppostbuild": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix server && npm install --prefix client && npm run build --prefix client"
   },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
   "dependencies": {
-    "bootstrap": "^5.1.3",
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-icons": "^4.3.1"
-  },
-  "devDependencies": {
-    "@types/bootstrap": "^5.1.12",
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "concurrently": "^6.0.1"
   }
 }
